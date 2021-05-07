@@ -1,8 +1,12 @@
 import React from "react";
 
 function App(){
-  <>
-    <Header />
-    <List />
-  </>
+  return (
+    <>
+      <Header />
+      <List />
+    </>
+  )
 }
+
+export default App;
