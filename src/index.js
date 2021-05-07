@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
 import firebase from "./firebase";
-import Background from "./components/Background"
+// import Background from "./components/Background"
 import 'firebase/auth';
 
 const store = createStore(rootReducer);
@@ -26,7 +26,7 @@ const rrfProps = {
 ReactDOM.render(
   <Provider store ={store}>
     <ReactReduxFirebaseProvider {...rrfProps}>
-      <Background />
+      {/* <Background /> */}
       <App />
     </ReactReduxFirebaseProvider>
   </Provider>,
