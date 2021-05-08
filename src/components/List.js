@@ -7,7 +7,11 @@ function List(){
   const textToDisplay = returnSource(testProj, testObj);
   return (
     <>
-    <p>{textToDisplay}</p>
+      <pre>
+        <code>
+            {textToDisplay}
+        </code>
+      </pre> 
     </>
   )
 }
