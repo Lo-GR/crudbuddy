@@ -1,32 +1,24 @@
-export default returnSource = (objName) => {
+export default returnSource = (projName, objName) => {
 
   return
   `
   namespace NationalParksAPI.Controllers
-{
-  [ApiController]
-  public class StatesController : ControllerBase
   {
-    private readonly NationalParksAPIContext _db;
-    public StatesController(NationalParksAPIContext db)
+    [ApiController]
+    public class StatesController : ControllerBase
     {
-      _db = db;
-    }
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<State>>> Get(string name, string region)
-    {
-      var query = _db.States.Include(entry => entry.Parks).AsQueryable();
-      if (name != null)
+      private readonly NationalParksAPIContext _db;
+      public StatesController(NationalParksAPIContext db)
       {
-        query = query.Where(entry => entry.Name.Contains(name));
+        _db = db;
       }
-      if (region != null)
+      [HttpGet]
+      public async Task<ActionResult<IEnumerable<State>>> Get()
       {
-        query = query.Where(entry => entry.Region.Contains(region));
+        var query = _db.States.AsQueryable();
+        return await query.ToListAsync();
       }
-      return await query.ToListAsync();
     }
   }
-}
   `
 }
