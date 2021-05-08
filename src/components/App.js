@@ -5,8 +5,10 @@ import List from "./List";
 function App(){
   return (
     <>
-      <Header />
-      <List />
+      <div className="appContainer">
+        <Header />
+        <List />
+      </div>
     </>
   )
 }
