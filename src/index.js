@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './components/App';
 import { createStore } from 'redux';
-// import rootReducer from './reducers/index';
+import rootReducer from './reducers/index';
 import { Provider } from 'react-redux';
-// import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
-// import { createFirestoreInstance } from 'redux-firestore';
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
+import { createFirestoreInstance } from 'redux-firestore';
 import firebase from "./firebase";
 // import Background from "./components/Background"
 import 'firebase/auth';
 
-const store = createStore();
+const store = createStore(rootReducer);
 
 const rrfProps = {
   firebase,
@@ -32,3 +32,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
