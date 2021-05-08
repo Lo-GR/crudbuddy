@@ -43,3 +43,4 @@ Is there anything else you'd like your instructor to know?
 
 - This might seem hard to visualize right now but once I get far enough in it'll be clear what I'm attempting.
 - My overall goal is to show off my skills on front end by designing a quality site to use and show off my backend knowledge by showing I'm familiar enough with backend to create a generator for it.
+- I will have Firebase connected to this application but I will rely on state storage over database storage until I get user authentication and authorization integrated.
