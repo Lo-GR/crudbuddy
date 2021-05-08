@@ -1,21 +1,23 @@
 export default returnSource = (projName, objName) => {
-
-  return
-  `
-  namespace NationalParksAPI.Controllers
+  const projNameSpace = projName + ".Controllers";
+  const projContext = projname + "Context";
+  const objController = objName + "sController";
+  
+  return `
+  namespace ${projNameSpace}
   {
     [ApiController]
-    public class StatesController : ControllerBase
+    public class ${objController} : ControllerBase
     {
-      private readonly NationalParksAPIContext _db;
-      public StatesController(NationalParksAPIContext db)
+      private readonly ${projContext} _db;
+      public ${objController}(${projContext} db)
       {
         _db = db;
       }
       [HttpGet]
-      public async Task<ActionResult<IEnumerable<State>>> Get()
+      public async Task<ActionResult<IEnumerable<${objName}>>> Get()
       {
-        var query = _db.States.AsQueryable();
+        var query = _db.${objName}s.AsQueryable();
         return await query.ToListAsync();
       }
     }
