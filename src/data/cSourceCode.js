@@ -1,6 +1,6 @@
-export default returnSource = (projName, objName) => {
+const returnSource = (projName, objName) => {
   const projNameSpace = projName + ".Controllers";
-  const projContext = projname + "Context";
+  const projContext = projName + "Context";
   const objController = objName + "sController";
   
   return `
@@ -24,3 +24,5 @@ export default returnSource = (projName, objName) => {
   }
   `
 }
+
+export default returnSource

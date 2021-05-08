@@ -1,9 +1,13 @@
 import React from 'react';
+import returnSource from '../data/cSourceCode';
 
 function List(){
+  const testProj = "ParkAPI";
+  const testObj ="State"
+  const textToDisplay = returnSource(testProj, testObj);
   return (
     <>
-      <h1>List</h1>
+    <p>{textToDisplay}</p>
     </>
   )
 }
