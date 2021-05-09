@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./Header";
-import List from "./List";
+import Content from "./Content";
+import Nav from "./Nav";
 
 function App(){
   return (
     <>
+      <Header />
       <div className="appContainer">
-        <Header />
-        <List />
+        <Nav />
+        <Content />
       </div>
     </>
   )
