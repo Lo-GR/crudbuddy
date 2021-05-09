@@ -10,5 +10,6 @@ export default (state = {}, action) => {
           objName: objName
         }
       })
+    default: return state;
   }
 }
