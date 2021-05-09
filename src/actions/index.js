@@ -9,3 +9,7 @@ export const addCRUD = crudInfo => {
     objName: objName
   }
 }
+
+export const toggleNew = () => {
+  return {type: c.TOGGLE_NEW}
+}
