@@ -7,8 +7,8 @@ function ContextProvider({children}){
   const [toggleNew, setToggleNew] = useState(false);
   return (
     <Context.Provider value={{
-      crudList: cruds,
-      setCrudList: setCruds,
+      cruds: cruds,
+      setCruds: setCruds,
       toggleNew: toggleNew,
       setToggleNew: setToggleNew
     }}>
