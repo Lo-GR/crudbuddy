@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { Context } from "../context/app-context";
 
 
 function NavButtons(){
+  const {toggleNew, setToggleNew} = useContext(Context);
   return (
     <>
-      <button>Place Holder</button>
+      <button onClick={()=>{setToggleNew(!toggleNew);}}>New Form</button>
     </>
   )
 }
