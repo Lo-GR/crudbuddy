@@ -1,6 +1,6 @@
 import React from "react";
 
-function ReusableForm(){
+function ReusableForm(props){
   return (
     <>
       <form onSubmit={props.formSubmissionHandler}>
