@@ -11,7 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button{
+  background-color: rgb(141, 129, 129); 
+  height: 30px;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition-duration: .4s;
+  margin: 3px;
+  font-family: 'Crimson Text', serif;
+}
 
+button:hover {
+  background-color: #ffffff; 
+  color: rgb(141, 129, 129);
+}
 .appContainer {
   justify-content: space-around;
   display: flex;
