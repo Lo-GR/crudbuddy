@@ -1,17 +1,14 @@
 import React, {useContext} from 'react';
 import ReusableForm from "./ReusableForm";
 import {Context} from "../context/app-context";
-import {v4} from 'uuid';
 
-
-function NewForm(){
-  const {cruds, setCruds} = useContext(Context);
-  function submitNew (event){
+function EditForm(){
+  const {cruds, setCruds, selectedObj} = useContext(Context);
+  function submitEdit (event){
     event.preventDefault();
-    const id = v4();
     setCruds({
       ...cruds,
-      [id]: {
+      [selectedObj]: {
         // split and join used to remove spaces
         projName: event.target.projName.value.split(" ").join(""),
         objName: event.target.objName.value.split(" ").join(""),
@@ -21,9 +18,9 @@ function NewForm(){
   }
   return (
     <>
-      <ReusableForm formSubmissionHandler={submitNew} />
+      <ReusableForm formSubmissionHandler={submitEdit} />
     </>
   )
 }
 
-export default NewForm;
+export default EditForm;

@@ -13,4 +13,3 @@ function NavButtons(){
 }
 
 export default NavButtons;
-// {toggleNew && selectedObj === "" ? <NewForm /> : null}
