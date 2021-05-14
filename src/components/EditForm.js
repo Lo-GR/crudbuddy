@@ -18,7 +18,7 @@ function EditForm(){
   }
   return (
     <>
-      <ReusableForm formSubmissionHandler={submitEdit} />
+      <ReusableForm formSubmissionHandler={submitEdit} buttonText="Submit Edit"/>
     </>
   )
 }

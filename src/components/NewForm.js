@@ -21,7 +21,7 @@ function NewForm(){
   }
   return (
     <>
-      <ReusableForm formSubmissionHandler={submitNew} />
+      <ReusableForm formSubmissionHandler={submitNew} buttonText="Submit New CRUD" />
     </>
   )
 }
