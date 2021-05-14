@@ -5,11 +5,11 @@ import { Context } from "../context/app-context";
 
 
 function Nav(){
-  const {toggleNew} = useContext(Context);
+  const {toggleNew, selectedObj} = useContext(Context);
   
   return (
     <>
-      {toggleNew ? <NewForm /> : null}
+      {toggleNew && selectedObj === "" ? <NewForm /> : null}
       <NavButtons />
     </>
   )
