@@ -3,7 +3,7 @@ import { Context } from "../context/app-context";
 import returnSource from '../data/cSourceCode';
 
 function List(){
-  const {selectedObj, cruds} = useContext(Context);
+  const {selectedObj, setSelectedObj, cruds} = useContext(Context);
   const crudToDisplay = cruds[selectedObj];
   const textToDisplay = returnSource(crudToDisplay.projName, crudToDisplay.objName);
   return (
@@ -13,6 +13,7 @@ function List(){
             {textToDisplay}
         </code>
       </pre> 
+      <button onClick={()=> setSelectedObj("")} >Back to List</button>
     </>
   )
 }
