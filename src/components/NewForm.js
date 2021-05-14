@@ -8,11 +8,13 @@ function NewForm(){
   const {cruds, setCruds} = useContext(Context);
   function submitNew (event){
     event.preventDefault();
+    const id = v4();
     setCruds({
       ...cruds,
-      [v4()]: {
+      [id]: {
         projName: event.target.projName.value,
-        objName: event.target.objName.value
+        objName: event.target.objName.value,
+        id: id
       }
     })
     Object.values(cruds).map((crud)=>{
