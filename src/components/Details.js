@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { Context } from "../context/app-context";
 import returnSource from '../data/cSourceCode';
 
 function List(){
-  const testProj = "ParkAPI";
-  const testObj ="State"
-  const textToDisplay = returnSource(testProj, testObj);
+  const {selectedObj, cruds} = useContext(Context);
+  const crudToDisplay = cruds[selectedObj];
+  const textToDisplay = returnSource(crudToDisplay.projName, crudToDisplay.objName);
   return (
     <>
       <pre>
