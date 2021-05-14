@@ -12,8 +12,9 @@ function NewForm(){
     setCruds({
       ...cruds,
       [id]: {
-        projName: event.target.projName.value,
-        objName: event.target.objName.value,
+        // split and join used to remove spaces
+        projName: event.target.projName.value.split(" ").join(""),
+        objName: event.target.objName.value.split(" ").join(""),
         id: id
       }
     })
