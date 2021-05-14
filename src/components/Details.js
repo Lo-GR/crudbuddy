@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { Context } from "../context/app-context";
 import returnSource from '../data/cSourceCode';
 
-function List(){
+function Details(){
   const {selectedObj, setSelectedObj, cruds} = useContext(Context);
   const crudToDisplay = cruds[selectedObj];
   const textToDisplay = returnSource(crudToDisplay.projName, crudToDisplay.objName);
@@ -18,4 +18,4 @@ function List(){
   )
 }
 
-export default List;
+export default Details;
