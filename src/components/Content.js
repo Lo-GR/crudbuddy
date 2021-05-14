@@ -4,10 +4,10 @@ import Details from "./Details";
 import { Context } from "../context/app-context";
 
 function Content(){
-  const {toggleList} = useContext(Context)
+  const {selectedObj} = useContext(Context)
   return (
     <>
-      {toggleList ? <List /> : <Details />}
+      {selectedObj === "" ? <List /> : <Details />}
     </>
   )
 }
