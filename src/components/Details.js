@@ -13,7 +13,6 @@ function Details(){
             {textToDisplay}
         </code>
       </pre> 
-      <button onClick={()=> setSelectedObj("")} >Back to List</button>
     </>
   )
 }
