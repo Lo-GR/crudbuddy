@@ -1,17 +1,26 @@
 import React, {useContext} from 'react';
 import ReusableForm from "./ReusableForm";
-import {Context} from "../context/app-context";
+import {Context, changePunctuation} from "../context/app-context";
 
 function EditForm(){
   const {cruds, setCruds, selectedObj} = useContext(Context);
   function submitEdit (event){
     event.preventDefault();
+    // function changePunctuation(name){
+    //   const toArray = name.split(" ");
+    //   const toUpperCaseArray = toArray.map(e => {
+    //     let splitWord = e.split("");
+    //     console.log(e + " and " + splitWord)
+    //     splitWord[0] = splitWord[0].toUpperCase()
+    //     return splitWord.join("");})
+    //   return toUpperCaseArray.join("");
+    // }
     setCruds({
       ...cruds,
       [selectedObj]: {
         // split and join used to remove spaces
-        projName: event.target.projName.value.split(" ").join(""),
-        objName: event.target.objName.value.split(" ").join(""),
+        projName: changePunctuation(event.target.projName.value),
+        objName: changePunctuation(event.target.objName.value),
         id: selectedObj
       }
     })

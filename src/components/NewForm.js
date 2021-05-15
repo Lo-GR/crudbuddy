@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import ReusableForm from "./ReusableForm";
-import {Context} from "../context/app-context";
+import {Context, changePunctuation} from "../context/app-context";
 import {v4} from 'uuid';
 
 
@@ -13,8 +13,8 @@ function NewForm(){
       ...cruds,
       [id]: {
         // split and join used to remove spaces
-        projName: event.target.projName.value.split(" ").join(""),
-        objName: event.target.objName.value.split(" ").join(""),
+        projName: changePunctuation(event.target.projName.value),
+        objName: changePunctuation(event.target.objName.value),
         id: id
       }
     })
