@@ -90,8 +90,8 @@ export const returnModel = (projName, objName, properties) =>{
   let parseProperties = ``;
   for (let i = 0; i < properties.length; i++){
     if(properties[i] !== "-1"){
-      properties = properties + `
-public string ${properties[i]} {get; set;}`
+      parseProperties = parseProperties + `
+    public string ${properties[i]} {get; set;}`
     }
   }
   return `

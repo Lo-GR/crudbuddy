@@ -17,27 +17,27 @@ function ReusableForm(props){
           type='text'
           name='property1'
           placeholder='Name of Property in Object' 
-          value="-1"/>
+          defaultValue="-1"/>
         <input
           type='text'
           name='property2'
           placeholder='Name of Property in Object' 
-          value="-1"/>
+          defaultValue="-1"/>
         <input
           type='text'
           name='property3'
           placeholder='Name of Property in Object' 
-          value="-1"/>
+          defaultValue="-1"/>
         <input
           type='text'
           name='property4'
           placeholder='Name of Property in Object' 
-          value="-1"/>
+          defaultValue="-1"/>
         <input
           type='text'
           name='property5'
           placeholder='Name of Property in Object' 
-          value="-1"/>
+          defaultValue="-1"/>
         <button type='submit'>{props.buttonText}</button>
       </form>
     </>
