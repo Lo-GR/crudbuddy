@@ -29,6 +29,16 @@ public async Task<ActionResult<${objName}>> Post(${objName} entry)
   await _db.SaveChangesAsync();
   return CreatedAtAction(nameof(Get${objName}), new {id = entry.${objName}Id}, entry);
 }
+[HttpGet("{id}")]
+public async Task<ActionResult<${objName}>> Get${objName}(int id)
+{
+  ${objName} entry = await _db.${objName}s.FindAsync(id);
+  if (entry == null)
+  {
+    return NotFound();
+  }
+  return entry;
+}
   `
 }
 
