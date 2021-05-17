@@ -84,3 +84,21 @@ private bool ${objName}Exists(int id)
   }
   `
 }
+
+export const returnModel = (projName, objName) =>{
+  const projNameSpace = projName + ".Models";
+  return `
+namespace ${projNameSpace}
+{
+  public class ${objName}
+  {
+    public ${objName}()
+    {
+
+    }
+    public int ${objName}Id {get; set;}
+    [Required] 
+  }
+}
+`
+}
