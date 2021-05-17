@@ -1,4 +1,4 @@
-const returnSource = (projName, objName) => {
+export const returnController = (projName, objName) => {
   const projNameSpace = projName + ".Controllers";
   const projContext = projName + "Context";
   const objController = objName + "sController";
@@ -84,5 +84,3 @@ private bool ${objName}Exists(int id)
   }
   `
 }
-
-export default returnSource
