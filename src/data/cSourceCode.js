@@ -39,6 +39,33 @@ public async Task<ActionResult<${objName}>> Get${objName}(int id)
   }
   return entry;
 }
+[HttpPut("{id}")]
+public async Task<ActionResult> Put(int id, ${objName} entry)
+{
+  if (id != entry.${objName}Id)
+  {
+    return NotFound();
+  }
+
+  _db.Entry(entry).State = EntityState.Modified;
+
+  try
+  {
+    await _db.SaveChangesAsync();
+  }
+  catch (DbUpdateConcurrencyException)
+  {
+    if (!${objName}Exists(id))
+    {
+      return NotFound();
+    }
+    else
+    {
+      throw;
+    }
+  }
+  return NoContent();
+}
   `
 }
 
