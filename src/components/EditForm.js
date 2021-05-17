@@ -19,6 +19,7 @@ function EditForm(){
         projName: changePunctuation(event.target.projName.value),
         objName: changePunctuation(event.target.objName.value),
         properties: propertyArray,
+        queries: event.target.check.checked,
         id: selectedObj
       }
     })

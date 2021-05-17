@@ -10,7 +10,8 @@ function Details(){
   const model = code.returnModel(crudToDisplay.projName, crudToDisplay.objName, crudToDisplay.properties)
   return (
     <>
-    <button onClick={()=>{setDetailView(!detailView);}}>test</button> 
+    <button onClick={()=>{setDetailView(false);}}>Models</button>
+    <button onClick={()=>{setDetailView(true);}}>Controllers</button>  
       <pre>
         <code>
             {detailView ? controller : model}
