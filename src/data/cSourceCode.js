@@ -7,11 +7,14 @@ export const returnController = (projName, objName, properties) => {
   for (let i = 0; i < properties.length; i++){
     if(properties[i] !== "-1"){
       queryProperties = queryProperties + `
-      if (name != null)
+      if (${properties[i].toLowerCase()} != null)
       {
-        query = query.Where(entry => entry.${properties[i]}.Contains(name));
+        query = query.Where(entry => entry.${properties[i]}.Contains(${properties[i].toLowerCase()}));
       }`
-      argumentProperties = argumentProperties + `string ${properties[i].toLowerCase()}, `
+      argumentProperties = argumentProperties + `string ${properties[i].toLowerCase()}`
+    }
+    if(properties[i +1] !== "-1" && properties[i+1] !== undefined){
+      argumentProperties = argumentProperties + `, `;
     }
   }
   return `
