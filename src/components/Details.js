@@ -6,7 +6,7 @@ function Details(){
   const [detailView, setDetailView] = useState(true);
   const {selectedObj, cruds} = useContext(Context);
   const crudToDisplay = cruds[selectedObj];
-  const controller = code.returnController(crudToDisplay.projName, crudToDisplay.objName, crudToDisplay.properties);
+  const controller = code.returnController(crudToDisplay.projName, crudToDisplay.objName, crudToDisplay.properties, crudToDisplay.queries);
   const model = code.returnModel(crudToDisplay.projName, crudToDisplay.objName, crudToDisplay.properties)
   return (
     <>

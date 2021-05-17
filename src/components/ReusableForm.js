@@ -38,6 +38,9 @@ function ReusableForm(props){
           name='property5'
           placeholder='Name of Property in Object' 
           defaultValue="-1"/>
+        <input
+          type="checkbox"
+          name="check" />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </>

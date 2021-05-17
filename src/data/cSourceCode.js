@@ -1,20 +1,22 @@
-export const returnController = (projName, objName, properties) => {
+export const returnController = (projName, objName, properties, queries) => {
   const projNameSpace = projName + ".Controllers";
   const projContext = projName + "Context";
   const objController = objName + "sController";
   let queryProperties = ``;
   let argumentProperties = ``;
-  for (let i = 0; i < properties.length; i++){
-    if(properties[i] !== "-1"){
-      queryProperties = queryProperties + `
-      if (${properties[i].toLowerCase()} != null)
-      {
-        query = query.Where(entry => entry.${properties[i]}.Contains(${properties[i].toLowerCase()}));
-      }`
-      argumentProperties = argumentProperties + `string ${properties[i].toLowerCase()}`
-    }
-    if(properties[i +1] !== "-1" && properties[i+1] !== undefined){
-      argumentProperties = argumentProperties + `, `;
+  if(queries){
+    for (let i = 0; i < properties.length; i++){
+      if(properties[i] !== "-1"){
+        queryProperties = queryProperties + `
+        if (${properties[i].toLowerCase()} != null)
+        {
+          query = query.Where(entry => entry.${properties[i]}.Contains(${properties[i].toLowerCase()}));
+        }`
+        argumentProperties = argumentProperties + `string ${properties[i].toLowerCase()}`
+      }
+      if(properties[i +1] !== "-1" && properties[i+1] !== undefined){
+        argumentProperties = argumentProperties + `, `;
+      }
     }
   }
   return `
