@@ -7,7 +7,7 @@ function Details(){
   const {selectedObj, cruds} = useContext(Context);
   const crudToDisplay = cruds[selectedObj];
   const controller = code.returnController(crudToDisplay.projName, crudToDisplay.objName);
-  const model = code.returnModel(crudToDisplay.projName, crudToDisplay.objName)
+  const model = code.returnModel(crudToDisplay.projName, crudToDisplay.objName, crudToDisplay.properties)
   return (
     <>
     <button onClick={()=>{setDetailView(!detailView);}}>test</button> 

@@ -85,8 +85,15 @@ private bool ${objName}Exists(int id)
   `
 }
 
-export const returnModel = (projName, objName) =>{
+export const returnModel = (projName, objName, properties) =>{
   const projNameSpace = projName + ".Models";
+  let parseProperties = ``;
+  for (let i = 0; i < properties.length; i++){
+    if(properties[i] !== "-1"){
+      properties = properties + `
+public string ${properties[i]} {get; set;}`
+    }
+  }
   return `
 namespace ${projNameSpace}
 {
@@ -97,7 +104,8 @@ namespace ${projNameSpace}
 
     }
     public int ${objName}Id {get; set;}
-    [Required] 
+    [Required]
+    ${parseProperties}
   }
 }
 `
