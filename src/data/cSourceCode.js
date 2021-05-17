@@ -66,6 +66,22 @@ public async Task<ActionResult> Put(int id, ${objName} entry)
   }
   return NoContent();
 }
+private bool ${objName}Exists(int id)
+{
+  return _db.${objName}s.Any(entry => entry.${objName}Id == id);
+}
+[HttpDelete("{id}")]
+  public async Task<ActionResult> Delete${objName}(int id)
+  {
+    ${objName} entry = await _db.${objName}s.FindAsync(id);
+    if (entry == null)
+    {
+      return NotFound();
+    }
+    _db.${objName}s.Remove(entry);
+    await _db.SaveChangesAsync();
+    return NoContent();
+  }
   `
 }
 
