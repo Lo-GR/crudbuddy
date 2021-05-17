@@ -3,7 +3,7 @@ import { Context } from "../context/app-context";
 import returnSource from '../data/cSourceCode';
 
 function Details(){
-  const {selectedObj, setSelectedObj, cruds} = useContext(Context);
+  const {selectedObj, cruds} = useContext(Context);
   const crudToDisplay = cruds[selectedObj];
   const textToDisplay = returnSource(crudToDisplay.projName, crudToDisplay.objName);
   return (

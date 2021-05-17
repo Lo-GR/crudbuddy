@@ -4,24 +4,31 @@ const returnSource = (projName, objName) => {
   const objController = objName + "sController";
   
   return `
-  namespace ${projNameSpace}
+namespace ${projNameSpace}
+{
+  [ApiController]
+  public class ${objController} : ControllerBase
   {
-    [ApiController]
-    public class ${objController} : ControllerBase
+    private readonly ${projContext} _db;
+    public ${objController}(${projContext} db)
     {
-      private readonly ${projContext} _db;
-      public ${objController}(${projContext} db)
-      {
-        _db = db;
-      }
-      [HttpGet]
-      public async Task<ActionResult<IEnumerable<${objName}>>> Get()
-      {
-        var query = _db.${objName}s.AsQueryable();
-        return await query.ToListAsync();
-      }
+      _db = db;
+    }
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<${objName}>>> Get()
+    {
+      var query = _db.${objName}s.AsQueryable();
+      return await query.ToListAsync();
     }
   }
+}
+[HttpPost]
+public async Task<ActionResult<${objName}>> Post(${objName} entry)
+{
+  _db.${objName}s.Add(entry);
+  await _db.SaveChangesAsync();
+  return CreatedAtAction(nameof(Get${objName}), new {id = entry.${objName}Id}, entry);
+}
   `
 }
 
