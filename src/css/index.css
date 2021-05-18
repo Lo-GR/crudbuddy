@@ -44,13 +44,19 @@ button:hover {
 form{
   width: 400px;
 }
-.code{
-  width:400px;overflow:auto
-}
 .content{
   width: 500px;
   background-color: #001D3D;
   margin: auto;
   color: #DDFFF7;
+  padding: 10px;
   /* border-radius: ; */
+}
+.code{
+  width:400px;
+  overflow:auto;
+  border-color: #003566;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #7D7E75;
 }
