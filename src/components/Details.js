@@ -11,12 +11,14 @@ function Details(){
   return (
     <>
     <button onClick={()=>{setDetailView(false);}}>Models</button>
-    <button onClick={()=>{setDetailView(true);}}>Controllers</button>  
+    <button onClick={()=>{setDetailView(true);}}>Controllers</button>
+    <div className="code">
       <pre>
         <code>
             {detailView ? controller : model}
         </code>
       </pre> 
+    </div>
     </>
   )
 }

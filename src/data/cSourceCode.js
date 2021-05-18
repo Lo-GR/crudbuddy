@@ -127,3 +127,5 @@ namespace ${projNameSpace}
 }
 `
 }
+
+// export const returnContext = (projName, objName)

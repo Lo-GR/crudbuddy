@@ -5,11 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    -webkit-user-select: all;
+    user-select: all;
+}
+code:focus {
+  animation: select 100ms step-end forwards;
 }
 button{
   background-color: rgb(141, 129, 129); 
@@ -29,7 +35,21 @@ button:hover {
   background-color: #ffffff; 
   color: rgb(141, 129, 129);
 }
-/* .appContainer {
-  justify-content: space-around;
-  display: flex;
-} */
+form{
+  width: 400px;
+}
+.code{
+  width:400px;overflow:auto
+}
+.content{
+  width: 500px;
+  background-color: red;
+  margin: auto;
+}
+
+@keyframes select {
+  to {
+    -webkit-user-select: auto;
+    user-select: auto;
+  }
+}

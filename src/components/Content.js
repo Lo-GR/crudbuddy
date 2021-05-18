@@ -7,7 +7,9 @@ function Content(){
   const {selectedObj} = useContext(Context)
   return (
     <>
-      {selectedObj === "" ? <List /> : <Details />}
+      <div className="content">
+        {selectedObj === "" ? <List /> : <Details />}
+      </div>
     </>
   )
 }

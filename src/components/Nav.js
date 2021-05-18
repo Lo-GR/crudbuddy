@@ -3,6 +3,7 @@ import NavButtons from './NavButtons';
 import NewForm from "./NewForm";
 import EditForm from "./EditForm";
 import { Context } from "../context/app-context";
+import Grid from '@material-ui/core/Grid';
 
 
 function Nav(){
@@ -10,9 +11,9 @@ function Nav(){
   
   return (
     <>
-      {toggleNew && selectedObj === "" ? <NewForm /> : null}
-      {toggleEdit ? <EditForm /> : null}
-      <NavButtons />
+        <NavButtons />
+        {toggleNew && selectedObj === "" ? <NewForm /> : null}
+        {toggleEdit ? <EditForm /> : null}
     </>
   )
 }
