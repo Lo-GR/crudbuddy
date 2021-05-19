@@ -8,6 +8,10 @@ function ContextProvider({children}){
   const [selectedObj, setSelectedObj] = useState("");
   const [toggleEdit, setToggleEdit] = useState(false);
   const [animate, setAnimate] = useState(0);
+  const [mascot, setMascot] = useState(`
+    @
+  <{}>
+  /  | `)
   return (
     <Context.Provider value={{
       cruds: cruds,
@@ -19,7 +23,9 @@ function ContextProvider({children}){
       toggleEdit: toggleEdit,
       setToggleEdit: setToggleEdit,
       animate: animate,
-      setAnimate: setAnimate
+      setAnimate: setAnimate,
+      mascot: mascot,
+      setMascot: setMascot
     }}>
       {children}
     </Context.Provider>
