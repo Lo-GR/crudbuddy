@@ -21,9 +21,17 @@ function ContextProvider({children}){
     @
   <{}~*
   /  | `,
-    shrug: `
+    explain2: `
     @
  *~{}~*
+  /  |`,
+  shrug: `
+    @
+ *^{}^*
+  /  |`,
+    joy:`
+    @
+ ヽ{}ノ
   /  |`
   })
   return (

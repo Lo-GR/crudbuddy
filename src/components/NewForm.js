@@ -5,9 +5,10 @@ import {v4} from 'uuid';
 
 
 function NewForm(){
-  const {cruds, setCruds} = useContext(Context);
+  const {cruds, setCruds, setToggleNew} = useContext(Context);
   function submitNew (event){
     event.preventDefault();
+    setToggleNew(false);
     const id = v4();
     const propertyArray = [
       changePunctuation(event.target.property1.value), 
