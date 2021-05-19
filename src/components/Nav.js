@@ -11,9 +11,16 @@ function Nav(){
   
   return (
     <>
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="baseline"
+        >
         <NavButtons />
         {toggleNew && selectedObj === "" ? <NewForm /> : null}
         {toggleEdit ? <EditForm /> : null}
+      </Grid>
     </>
   )
 }

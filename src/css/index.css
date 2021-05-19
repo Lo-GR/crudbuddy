@@ -48,7 +48,7 @@ button{
   font-size: 16px;
   border-radius: 20px 0 20px 0px;
   transition-duration: .25s;
-  margin: 3px;
+  margin: 5px;
   font-family: 'Rajdhani', sans-serif;
 }
 
@@ -59,6 +59,11 @@ button:hover {
 }
 form{
   width: 400px;
+}
+input{
+  height: 40px;
+  margin: 5px;
+  border-radius: 20px 0 20px 0px;;
 }
 .content{
   width: 800px;
@@ -99,6 +104,17 @@ form{
 .listItem:hover{
   cursor: pointer;
   background-image: linear-gradient(to right, var(--mainbgcolor), var(--highlight));
+}
+.navButts{
+  width: 250px;
+  height: 30px;
+  padding: 10px;
+  background-color: var(--secondarycontentcolor);
+  margin: 20px;
+}
+.reuseForm{
+  padding: 10px;
+  margin: 20px;
 }
 @keyframes roll {
   0%   {left:500px }
