@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 :root {
   --mainbgcolor: #010711;
   --maincontentcolor: #001D3D;
@@ -66,7 +66,7 @@ form{
   /* border-radius: ; */
 }
 .code{
-  width: 600px;
+  /* width: ; */
   overflow:auto;
   color: var(--mainbgcolor);
   border-color: var(--secondarycontentcolor);
@@ -75,6 +75,7 @@ form{
   background-color: var(--thirdcontentcolor);
   padding: 10px;
   position: relative;
+  border-radius: 20px 0 0px 20px;
 }
 .code[animate='1']{
   animation: roll .75s; 
@@ -89,6 +90,9 @@ form{
   border-width: 1px;
   padding: 10px;
   background-image: linear-gradient(to right, var(--mainbgcolor), var(--additionalcolor2));
+  position: relative;
+  animation: roll .75s; 
+  animation-timing-function: ease;
 }
 .listItem:hover{
   cursor: pointer;
