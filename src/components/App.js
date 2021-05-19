@@ -3,6 +3,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Grid from '@material-ui/core/Grid';
 import Nav from "./Nav";
+import Mascot from './Mascot'
 
 function App(){
   return (
@@ -16,6 +17,7 @@ function App(){
       >
         <Grid container item md={6}>
           <Nav /> 
+          <Mascot />
         </Grid>
         <Grid container item md={6}>
           <Content />
