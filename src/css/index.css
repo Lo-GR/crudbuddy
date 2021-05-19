@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+:root {
+  --mainbgcolor: #000814;
+  --maincontentcolor: #001D3D;
+  --secondarycontentcolor: #003566;
+  --textcolor: #DDFFF7;
+  --highlight: #81C14B;
+  --additionalcolor1: #B80C09;
+  --additionalcolor2: #9ECE9A;
+  --thirdcontentcolor: #D9DCD6;
+
+
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,7 +18,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000814;
+  background-color: var(--mainbgcolor);
+  color: var(--textcolor);
+  padding: 10px;
 }
 
 code {
@@ -39,24 +53,49 @@ button{
 button:hover {
   background-color: black; 
   color: white;
-  border-color: #81C14B;
+  border-color: var(--highlight);
 }
 form{
   width: 400px;
 }
 .content{
-  width: 500px;
-  background-color: #001D3D;
+  width: 450px;
+  background-color: var(--maincontentcolor);
   margin: auto;
-  color: #DDFFF7;
   padding: 10px;
   /* border-radius: ; */
 }
 .code{
   width:400px;
   overflow:auto;
-  border-color: #003566;
+  color: var(--mainbgcolor);
+  border-color: var(--secondarycontentcolor);
   border-style: solid;
   border-width: 2px;
-  background-color: #7D7E75;
+  background-color: var(--thirdcontentcolor);
+  padding: 10px;
+}
+.listItem{
+  width: 400px;
+  height: 50px;
+  border-color: var(--secondarycontentcolor);
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  background-image: linear-gradient(to right, var(--mainbgcolor), var(--additionalcolor2));
+}
+.listItem:hover{
+  cursor: pointer;
+  animation-name: gradient;
+  animation-duration: 5s;
+}
+@keyframes gradient{
+  0%{
+    background-image: linear-gradient(to right, var(--mainbgcolor), var(--additionalcolor2));
+    left: -400px; 
+  }
+  100%{
+    background-image: linear-gradient(to right, var(--mainbgcolor), var(--highlight));
+    left: 0px; 
+  }
 }
