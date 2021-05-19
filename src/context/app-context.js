@@ -12,6 +12,16 @@ function ContextProvider({children}){
     @
   <{}>
   /  | `)
+  const [mascotPose, setMascotPose] = useState({
+    standard: `
+    @
+  <{}>
+  /  | `,
+    explain: `
+    @
+  <{}~*
+  /  | `
+  })
   return (
     <Context.Provider value={{
       cruds: cruds,
@@ -25,7 +35,9 @@ function ContextProvider({children}){
       animate: animate,
       setAnimate: setAnimate,
       mascot: mascot,
-      setMascot: setMascot
+      setMascot: setMascot,
+      mascotPose: mascotPose,
+      setMascotPose: setMascotPose
     }}>
       {children}
     </Context.Provider>
