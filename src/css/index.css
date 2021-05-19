@@ -86,16 +86,5 @@ form{
 }
 .listItem:hover{
   cursor: pointer;
-  animation-name: gradient;
-  animation-duration: 5s;
-}
-@keyframes gradient{
-  0%{
-    background-image: linear-gradient(to right, var(--mainbgcolor), var(--additionalcolor2));
-    left: -400px; 
-  }
-  100%{
-    background-image: linear-gradient(to right, var(--mainbgcolor), var(--highlight));
-    left: 0px; 
-  }
+  background-image: linear-gradient(to right, var(--mainbgcolor), var(--highlight));
 }
