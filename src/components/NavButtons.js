@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 
 function NavButtons(){
-  const {toggleNew, setToggleNew, toggleEdit, setToggleEdit, selectedObj, setSelectedObj} = useContext(Context);
+  const {toggleNew, setToggleNew, toggleEdit, setToggleEdit, selectedObj, setSelectedObj, setMascot, mascotPose} = useContext(Context);
   return (
     <>
       <div className="navButts">
@@ -15,7 +15,7 @@ function NavButtons(){
           alignItems="baseline"
         >
         {selectedObj === "" ? 
-        <button onClick={()=>{setToggleNew(!toggleNew);}}>{toggleNew ? "Back": "New Form"}</button> 
+        <button onClick={()=>{setToggleNew(!toggleNew); setMascot(mascotPose.explain)}}>{toggleNew ? "Back": "New Form"}</button> 
         : 
         <button onClick={()=>{setToggleEdit(!toggleEdit);}}>{toggleEdit ? "Back": "Edit CRUD"}</button>  }
         {selectedObj !== "" ?

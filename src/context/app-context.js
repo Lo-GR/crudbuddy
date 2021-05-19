@@ -20,7 +20,11 @@ function ContextProvider({children}){
     explain: `
     @
   <{}~*
-  /  | `
+  /  | `,
+    shrug: `
+    @
+ *~{}~*
+  /  |`
   })
   return (
     <Context.Provider value={{
