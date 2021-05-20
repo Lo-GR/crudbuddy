@@ -84,6 +84,7 @@ label[show="0"]{
   width: 800px;
   background-color: var(--maincontentcolor);
   margin: auto;
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 20px 0 0px 20px;
   border-style: solid;
