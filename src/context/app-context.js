@@ -38,6 +38,7 @@ function ContextProvider({children}){
   const [explainText, setExplainText] = useState({
     newForm: ["You can enter a name of your overall project and object name here. If you want, you can also add properties.","Finally, you can check whether you want query parameters for your properties. At this time, I can only add all the queries or none of them"]
   })
+  const [text, setText] = useState(false)
   return (
     <Context.Provider value={{
       cruds: cruds,
@@ -57,7 +58,9 @@ function ContextProvider({children}){
       explain: explain,
       setExplain: setExplain,
       explainText: explainText,
-      setExplainText: setExplainText
+      setExplainText: setExplainText,
+      text: text,
+      setText: setText
     }}>
       {children}
     </Context.Provider>
