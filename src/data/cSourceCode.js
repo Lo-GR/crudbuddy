@@ -20,6 +20,13 @@ export const returnController = (projName, objName, properties, queries) => {
     }
   }
   return `
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NationalParksAPI.Models;
+
 namespace ${projNameSpace}
 {
   [ApiController]
@@ -113,6 +120,8 @@ export const returnModel = (projName, objName, properties) =>{
     }
   }
   return `
+using System.ComponentModel.DataAnnotations;
+
 namespace ${projNameSpace}
 {
   public class ${objName}
