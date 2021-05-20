@@ -121,7 +121,20 @@ input{
 }
 .explanationText{
   font-family: 'Rajdhani', sans-serif;
-
+  width: 350px;
+  height: auto;
+  border-radius: 0 20px 20px 0;
+  border-left-color: var(--highlight);
+  border-width: 4px;
+  border-style: solid;
+  background-color: var(--additionalcolor2);
+}
+.explanationText p{
+  color: var(--maincontentcolor)
+}
+.explanationText button{
+  font-size: 12px;
+  height: 25px;
 }
 @keyframes roll {
   0%   {left:500px }

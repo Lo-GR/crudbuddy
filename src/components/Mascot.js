@@ -1,15 +1,16 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { Context } from "../context/app-context";
 
 
 function Mascot(){
-  const {mascot} = useContext(Context)
+  const {mascot, explain, setMascot, mascotPose} = useContext(Context);
+  const [text, setText] = useState(explain[0])
   return (
     <>
       <pre className="mascot">
       {mascot}
       </pre>
-      <div className="explanationText">Testing</div>
+      <div className="explanationText"><p>{text}<button onClick={()=>{setText(explain[1]); setMascot(mascotPose.explain)}}>Next</button></p></div>
     </>
   )
 }

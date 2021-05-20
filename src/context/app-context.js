@@ -33,7 +33,8 @@ function ContextProvider({children}){
     @
  ヽ{}ノ
   /  |`
-  })
+  });
+  const [explain, setExplain] = useState(["Welcome to CRUDBuddy, my name is Cruddy. I will be your guide through this site.", "On this site, you can add an object and project in order to create a full CRUD API Controller and Model in ASP .Net. Go ahead and try it!"])
   return (
     <Context.Provider value={{
       cruds: cruds,
@@ -49,7 +50,9 @@ function ContextProvider({children}){
       mascot: mascot,
       setMascot: setMascot,
       mascotPose: mascotPose,
-      setMascotPose: setMascotPose
+      setMascotPose: setMascotPose,
+      explain: explain,
+      setExplain: setExplain
     }}>
       {children}
     </Context.Provider>
