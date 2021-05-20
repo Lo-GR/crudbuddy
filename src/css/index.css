@@ -136,6 +136,9 @@ label[show="0"]{
 .reuseForm{
   padding: 10px;
   margin: 20px;
+  position: relative;
+  animation: rollReverse .75s; 
+  animation-timing-function: ease;
 }
 .mascot{
   font-size: 50px;
@@ -163,4 +166,8 @@ label[show="0"]{
 @keyframes roll {
   0%   {left:500px }
   100% {left:0px }
+}
+@keyframes rollReverse {
+  0%   {right:500px }
+  100% {right:0px }
 }
