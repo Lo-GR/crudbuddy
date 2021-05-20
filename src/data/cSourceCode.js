@@ -139,10 +139,12 @@ namespace ${projNameSpace}
 
 export const returnContext = (projName, objects) => {
   const projContext = projName + "Context";
-  const parseObjects = ``;
-  for (let i = 0; i< objects.length; i++){
-    parseObjects = parseObjects + `
-    public DbSet<${objects[i]}> ${objects[i]}s {get; set;}`
+  let parseObjects = ``;
+  if(objects.length > 0){
+    for (let i = 0; i< objects.length; i++){
+      parseObjects = parseObjects + `
+      public DbSet<${objects[i]}> ${objects[i]}s {get; set;}`
+    }
   }
   return `
 using Microsoft.EntityFrameworkCore;
