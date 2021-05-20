@@ -3,12 +3,13 @@ import { Context } from "../context/app-context";
 
 
 function Mascot(){
-  const {mascot, setMascot, mascotPose} = useContext(Context)
+  const {mascot} = useContext(Context)
   return (
     <>
       <pre className="mascot">
       {mascot}
       </pre>
+      <div className="explanationText">Testing</div>
     </>
   )
 }

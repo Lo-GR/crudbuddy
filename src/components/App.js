@@ -9,6 +9,7 @@ function App(){
   return (
     <>
       <Header />
+      <Mascot />
       <Grid
         container
         direction="row"
@@ -16,8 +17,7 @@ function App(){
         alignItems="baseline"
       >
         <Grid container item md={6}>
-          <Nav /> 
-          <Mascot />
+          <Nav />
         </Grid>
         <Grid container item md={6}>
           <Content />

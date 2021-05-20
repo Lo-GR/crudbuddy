@@ -119,6 +119,10 @@ input{
 .mascot{
   font-size: 50px;
 }
+.explanationText{
+  font-family: 'Rajdhani', sans-serif;
+
+}
 @keyframes roll {
   0%   {left:500px }
   100% {left:0px }
