@@ -24,14 +24,19 @@ function ReusableForm(props){
         justify="center"
         alignItems="baseline"
         >
+          Name of overall Project this Object belongs to
           <input
             type='text'
             name='projName'
-            placeholder='Project Namespace' />
+            placeholder='Project Namespace' 
+            required />
+          Name of Object
           <input
             type='text'
             name='objName'
-            placeholder='Name of object' />
+            placeholder='Name of object' 
+            required />
+          Add Properties to Object. (optional) 
           {formOptions.showBtn1 ? <button onClick={()=>{setFormOptions({...formOptions, showProp1: 1, showBtn1: false, showBtn2: true});}}>Add Properties to Object</button> : null}
           <input
             show={formOptions.showProp1}
@@ -71,7 +76,9 @@ function ReusableForm(props){
           <input
             show={formOptions.showProp1}
             type="checkbox"
-            name="check" />
+            name="check" 
+            className="checkbox"/>
+          <label show={formOptions.showProp1} for="check" value="Check this box if you would like queries in controller" ><small>Check this box if you would like queries in controller</small></label>
           <button type='submit'>{props.buttonText}</button>
           </Grid>
         </form>

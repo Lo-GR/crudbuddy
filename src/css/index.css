@@ -23,9 +23,6 @@ body {
   color: var(--textcolor);
   padding: 10px;
 }
-input[show="0"]{
-  display:none;
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -73,6 +70,12 @@ input{
   border-radius: 20px 0 20px 0px;
   border-width: 1px;
   border-color: var(--mainbgcolor);
+}
+input[show="0"]{
+  display:none;
+}
+label[show="0"]{
+  display: none;
 }
 .header{
   font-family: 'Orbitron', sans-serif;
@@ -153,6 +156,9 @@ input{
 .explanationText button{
   font-size: 12px;
   height: 25px;
+}
+.checkbox{
+  size: 20px;
 }
 @keyframes roll {
   0%   {left:500px }
