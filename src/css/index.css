@@ -44,7 +44,7 @@ button{
   padding: 8px 12px;
   text-decoration: none;
   font-size: 16px;
-  border-radius: 20px 0 20px 0px;
+  border-radius: 10px 0 10px 0px;
   transition-duration: .25s;
   margin: 5px;
   font-family: 'Rajdhani', sans-serif;
@@ -67,7 +67,7 @@ input{
   margin: 5px;
   padding: 5px;
   text-align: center;
-  border-radius: 20px 0 20px 0px;
+  border-radius: 10px 0 10px 0px;
   border-width: 1px;
   border-color: var(--mainbgcolor);
 }
@@ -118,6 +118,21 @@ label[show="0"]{
   position: relative;
   animation: roll .75s; 
   animation-timing-function: ease;
+}
+@media only screen and (min-width: 1200px){
+  .listItem h2{
+    font-size: x-large;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .listItem h2{
+    font-size: large;
+  }
+}
+@media only screen and (max-width: 700px){
+  .listItem h2{
+    font-size: medium;
+  }
 }
 .listItem:hover{
   cursor: pointer;

@@ -6,7 +6,7 @@ function List(){
   const {cruds, setSelectedObj, setAnimate, setText, explainText, setExplain, mascotPose, setMascot} = useContext(Context);
   const list = Object.values(cruds).map((crud)=>
       <div className="listItem" onClick = {() => {setSelectedObj(crud.id); setAnimate(1);setText(false);setMascot(mascotPose.joy); setExplain(explainText.selectCrud)}} key = {crud.id} >
-        <h2> Object: {crud.objName} | Project: {crud.projName}</h2>
+        <h2> Object: {crud.objName.length > 13 ? crud.objName.substring(0,13) + ".." : crud.objName} | Project: {crud.projName.length > 13 ? crud.projName.substring(0,13) + ".." : crud.projName}</h2>
       </div>
     )
   return (
