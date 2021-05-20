@@ -4,6 +4,7 @@ import Content from "./Content";
 import Grid from '@material-ui/core/Grid';
 import Nav from "./Nav";
 import Mascot from './Mascot'
+import Footer from "./Footer"
 
 function App(){
   return (
@@ -23,6 +24,7 @@ function App(){
           <Content />
         </Grid>
       </Grid>
+      <Footer />
     </>
   )
 }
