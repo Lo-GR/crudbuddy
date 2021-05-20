@@ -17,7 +17,8 @@
 * **Node Package Manager 6.14.9**
 * **webpack 4.39.3**
 * **eslint 6.3.0**
-* **Firebase/FireStore**
+* **Firebase**
+* **Material UI**
 * **C#** (for reference)
 * **.NET 5** (for reference)
 
@@ -32,7 +33,7 @@
 
 ## _Description_ 📃
 
-This application is designed to help developers generate basic CRUD in a MvC or API environment for a C# and .Net application.
+This application is designed to help developers generate basic CRUD API for a C# and .Net application.
 
 ---
 
