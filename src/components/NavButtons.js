@@ -23,6 +23,9 @@ function NavButtons(){
             setSelectedObj(""); 
             setToggleEdit(false);
             setToggleNew(false);
+            setMascot(mascotPose.shrug);
+            setExplain(explainText.backToList);
+            setText(false);
           }}>Back to List</button> :
           null }
           </Grid>
