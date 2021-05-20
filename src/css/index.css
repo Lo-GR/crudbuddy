@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 :root {
   --mainbgcolor: #010711;
   --maincontentcolor: #001D3D;
@@ -64,6 +65,9 @@ input{
   height: 25px;
   margin: 5px;
   border-radius: 20px 0 20px 0px;;
+}
+.header{
+  font-family: 'Orbitron', sans-serif;
 }
 .content{
   width: 800px;
