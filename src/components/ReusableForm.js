@@ -78,7 +78,7 @@ function ReusableForm(props){
             type="checkbox"
             name="check" 
             className="checkbox"/>
-          <label show={formOptions.showProp1} for="check" value="Check this box if you would like queries in controller" ><small>Check this box if you would like queries in controller</small></label>
+          <label show={formOptions.showProp1} htmlFor="check" value="Check this box if you would like queries in controller" ><small>Check this box if you would like queries in controller</small></label>
           <button type='submit'>{props.buttonText}</button>
           </Grid>
         </form>

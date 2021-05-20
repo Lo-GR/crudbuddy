@@ -91,7 +91,7 @@ label[show="0"]{
   border-width: 1px;
 }
 .code{
-  /* width: ; */
+
   overflow:auto;
   color: var(--mainbgcolor);
   border-color: var(--mainbgcolor);
