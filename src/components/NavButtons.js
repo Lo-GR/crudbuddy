@@ -17,7 +17,7 @@ function NavButtons(){
         {selectedObj === "" ? 
         <button onClick={()=>{setToggleNew(!toggleNew);setExplain(explainText.newForm); setMascot(mascotPose.standard); setText(false)}}>{toggleNew ? "Back": "New Form"}</button> 
         : 
-        <button onClick={()=>{setToggleEdit(!toggleEdit);}}>{toggleEdit ? "Back": "Edit CRUD"}</button>  }
+        <button onClick={()=>{setToggleEdit(!toggleEdit);setText(false);setExplain(explainText.editForm); setMascot(mascotPose.explain2)}}>{toggleEdit ? "Back": "Edit CRUD"}</button>  }
         {selectedObj !== "" ?
           <button onClick={()=> {
             setSelectedObj(""); 
