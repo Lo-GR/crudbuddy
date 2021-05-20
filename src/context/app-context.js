@@ -34,7 +34,10 @@ function ContextProvider({children}){
  ヽ{}ノ
   /  |`
   });
-  const [explain, setExplain] = useState(["Welcome to CRUDBuddy, my name is Cruddy. I will be your guide through this site.", "On this site, you can add an object and project in order to create a full CRUD API Controller and Model in ASP .Net. Go ahead and try it!"])
+  const [explain, setExplain] = useState(["Welcome to CRUDBuddy, my name is Cruddy. I will help you build your CRUD API.", "On this site, you can add an object and project in order to create a full CRUD API Controller and Model in ASP .Net. Go ahead and try it!"])
+  const [explainText, setExplainText] = useState({
+    newForm: ["You can enter a name of your overall project and object name here. If you want, you can also add properties.","Finally, you can check whether you want query parameters for your properties. At this time, I can only add all the queries or none of them"]
+  })
   return (
     <Context.Provider value={{
       cruds: cruds,
@@ -52,7 +55,9 @@ function ContextProvider({children}){
       mascotPose: mascotPose,
       setMascotPose: setMascotPose,
       explain: explain,
-      setExplain: setExplain
+      setExplain: setExplain,
+      explainText: explainText,
+      setExplainText: setExplainText
     }}>
       {children}
     </Context.Provider>
