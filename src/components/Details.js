@@ -12,6 +12,7 @@ function Details(){
     <>
     <button onClick={()=>{setDetailView(false);setAnimate(1);}}>Models</button>
     <button onClick={()=>{setDetailView(true);setAnimate(1);}}>Controllers</button>
+    <button onClick={()=>{setDetailView(true);setAnimate(1);}}>Controllers</button>
     <div className="code" animate={animate} onAnimationEnd={() => setAnimate(0)}>
       <pre>
         <code>
