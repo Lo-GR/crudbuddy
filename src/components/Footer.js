@@ -4,7 +4,7 @@ import React from 'react';
 function Footer(){
   return (
     <>
-      <h1 className="footer">_CRUDBuddy</h1>
+      <small className="footer">©2021 _CRUDBuddy - Logan Roth (Lo-GR) </small>
     </>
   )
 }

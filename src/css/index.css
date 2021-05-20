@@ -184,10 +184,9 @@ label[show="0"]{
   bottom: 0px;
   left: 0px;
   width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--secondarycontentcolor);
+  text-align: right;
   background-color: var(--mainbgcolor);
+  color: var(--secondarycontentcolor)
 }
 @keyframes roll {
   0%   {left:500px }
