@@ -1,4 +1,7 @@
 # <div align="center"> **CRUDBuddy** </div>
+
+# <div align="center"> ![Cruddy](./public/logo192.png) </div>
+
 ### This is a REACT programmed web application used to generate CRUD code
 
  ### _Contributor(s) and Contact Info_
